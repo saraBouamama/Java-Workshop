@@ -1,0 +1,95 @@
+
+    {
+    "required": [
+        "size",
+        "playerCoord",
+        "wizardCoord",
+        "foods",
+        "monsters"
+    ],
+    "type": [],
+ {
+        "size": {
+            "type": "integer"
+        },
+        "playerCoord": {
+            "required": [
+                "x",
+                "y"
+            ],
+            "type": "object",
+            "properties": {
+                "x": {
+                    "type": "integer"
+                },
+                "y": {
+                    "type": "integer"
+                }
+            }
+        },
+        "wizardCoord": {
+            "required": [
+                "x",
+                "y"
+            ],
+            "type": "object",
+            "properties": {
+                "x": {
+                    "type": "integer"
+                },
+                "y": {
+                    "type": "integer"
+                }
+            }
+        },
+        "foods": {
+            "type": "array",
+            "items": {
+                "type": [],
+                "anyOf": [
+                    {
+                        "required": [
+                            "x",
+                            "y",
+                            "type"
+                        ],
+                        "type": "object",
+                        "properties": {
+                            "x": {
+                                "type": "integer"
+                            },
+                            "y": {
+                                "type": "integer"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "monsters": {
+            "type": "array",
+            "items": {
+                "type": [],
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "properties": {
+                            "x": {
+                                "type": "integer"
+                            },
+                            "y": {
+                                "type": "integer"
+                            },
+                            "type": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
